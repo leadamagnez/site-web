@@ -1,0 +1,30 @@
+body {
+	font-size: 14px;  /* taille police de la page html */
+}
+
+.entete {
+	text-align: center;
+}
+h1.entete, h2.entete {
+	font-size: 1.5rem  /* taille police des titres: plus gros par rapport à la police de la page */
+	}
+
+#page {
+	width: fit-content;  /* la largeur de la page se forme par rapport au contenu qu'il y a */
+	background-color: rgb(94, 156, 81);  /* couleur du background vert */
+	border: 3px solid rgb(207, 155, 72);  /* bordure de la page en orange */
+	padding: 5px 30px;  /* le conetnue de la page est décalé de 5px en haut et en bas, et de 30px à droite et gauche*/
+	margin: auto  /* tout le contenue de la page est centrer (marge blanche)*/
+}
+
+#aboutme {
+	color: rgb(207, 155, 72);  /* couleur du texte en orange (comme la bordure)*/
+}
+
+#lien {
+	text-align: center;
+	border-top: 3px solid rgb(207, 155, 72);  /* bordure au dessus du lien en orange */
+}
+a:visited {
+  color: hotpink;  /* la couleur de lien visité devient rose */
+}
