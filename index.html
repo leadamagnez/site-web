@@ -4,19 +4,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/style.css">
+		<script src="assets/js/main.js" defer></script>
     </head>
-<div id="page">
+	
+
     <body>
+<div id="page">
 <div class="entete">	
 <h1>Léa Damagnez</h1>
 <h2>Licence 2 des Sciences du Langage</h2>
 <img src="./assets/img/chat_couronne.jpg" width="30%" /><img src="./assets/img/chat_noir.jpg" width="20%" />
 </div>
 
-<div id="aboutme">
-<p><b>A propos de moi</b><p>
+
+<div id="aboutme" style="display:none">
+<p><b>A propos de moi</b></p>
 <p>Mon CV des trois dernières années :</p>
-<table border="10px">
+<table border="10px"> <!--tableau cv-->
     <thead>
         <tr><th>année universitaire</th><th>Statut</th></tr>
     </thead>
@@ -27,7 +31,7 @@
     </tbody>
 </table>
 
-<p>Voici les cinq derniers livres que j'ai lu :</p>
+<p>Voici les cinq derniers livres que j'ai lu :</p> <!--liste -->
 <ul>
     <li><i>Secrets in the Dark</i>, Darcy Coates, Black Owl Books</li>
     <li><i>Voices in the Snow</i>, Darcy Coates, Black Owl Books</li>
@@ -35,13 +39,83 @@
     <li><i>The Second Death of Locke</i>, V.L Bolivano, Orbit</li>
     <li><i>If it Makes You Happy</i>, Julie Olivia, Berkley</li>
 </ul>
+
+
+<p id="date"></p>
+<button type="button" onclick="document.getElementById('date').innerHTML = Date()">Cliquer pour afficher la date et l'heure.</button> <!--bouton date et heure -->
 </div>
+
+<div class="affichagebt">
+<button type="button" onclick="document.getElementById('aboutme').style.display='block'">En savoir plus sur moi!</button> <!--bouton qui affiche le CV et la liste-->
+</div>
+
+
+<div id="container">
+            <h1 style="text-align:center;">Analyse des <span style="color:rgb(184, 209, 137)">données</span> dans un fichier</h1>
+
+            <div id="page-wrapper">
+                <div>
+                    <span>
+                        <label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt
+                                :</small></label>
+                        <input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
+                    </span>
+                </div>
+                <br />
+                <p style="text-align:center;">
+                    <small>
+                        <label for="delimID" class="mylabel">Délimiteur(s)</label>
+                        &nbsp;
+                        <input type="text" value=" ,;’'~|&#@=`-.?!%*$()[]{}_:+«»§\/" name="delim" id="delimID" size="40" />
+                    </small>
+                    <br />
+                    <small>
+                        <label for="poleID" class="mylabel">Pôle</label>
+                        &nbsp;
+                        <input type="text" placeholder="entrez un pôle..." name="pole" id="poleID" size="20" />
+                    </small>
+                    &nbsp;
+                    <small>
+                        <label for="lgID" class="mylabel">Longueur</label>
+                        &nbsp;
+                        <input type="text" value="10" name="lg" id="lgID" size="10" />
+                    </small>
+                    <br />
+                    <br />
+                    <button onclick="alert('bonjour');"><span>Bonjour !</span></button>
+                    <br />
+                    <br />
+                    <button class="submit" onclick="segText()"><span>segmentation</span></button> <!--bouton qui execute la fonction segmentation-->
+                    <button class="submit" onclick="afficheDictionnaire()"><span>dictionnaire</span></button> <!--bouton qui execute la fonction dictionnaire-->
+                    <button class="submit" onclick="concordancier()"><span>concordancier</span></button> <!--bouton qui execute la fonction concordancier-->
+                    <button class="submit" onclick="resultKujuj()"><span>kujuj</span></button> <!--bouton qui execute la fonction kujuj-->
+                    
+                </p>
+            </div>
+			<div id="logger" style="width:100%"></div>
+            <br />
+            <div id="Global">
+                <div id="fileDisplayArea"></div>
+                <div id="page-analysis"></div> <!--renvoie les résultats des boutons pour le fichier texte-->
+                <div id="Global">
+                <div id="right"></div> <!--affiche les txt modifiés à droite-->
+                </div> 
+            </div>
+</div>
+
+
+
 
 <div id="lien">
 <footer>
-  <p><a href="https://www.sorbonne-nouvelle.fr/">Lien vers le site de Sorbonne Nouvelle.</a></p>
+  <form action="https://www.sorbonne-nouvelle.fr/" target="_blank"> 
+    <div class="boutonfin">
+	<button type="submit">Site de la Sorbonne Nouvelle.</button> <!--bouton qui ouvre une nouvelle page vers le site de la sorbonne nouvelle-->
+    </div>
 </footer>
 </div>
-    </body>
+
 </div>
+    </body>
+
 </html>
