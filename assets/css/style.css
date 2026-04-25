@@ -1,30 +1,95 @@
 body {
 	font-size: 14px;  /* taille police de la page html */
+	background-color: rgb(82, 96, 34);
+}
+h1{
+	color : firebrick;
 }
 
 .entete {
 	text-align: center;
 }
 h1.entete, h2.entete {
-	font-size: 1.5rem  /* taille police des titres: plus gros par rapport à la police de la page */
+	font-size: 1.5rem ; /* taille police des titres: plus gros par rapport à la police de la page */
+	
 	}
 
 #page {
-	width: fit-content;  /* la largeur de la page se forme par rapport au contenu qu'il y a */
-	background-color: rgb(94, 156, 81);  /* couleur du background vert */
-	border: 3px solid rgb(207, 155, 72);  /* bordure de la page en orange */
+	width: 75%;  /* la largeur de la page en fonction de la place sur l'écran*/
+	background-color: rgb(184, 209, 137);  /* couleur du background vert */
+	border: 3px solid rgb(186, 27, 24);  /* bordure de la page en rouge */
 	padding: 5px 30px;  /* le conetnue de la page est décalé de 5px en haut et en bas, et de 30px à droite et gauche*/
 	margin: auto  /* tout le contenue de la page est centrer (marge blanche)*/
 }
 
 #aboutme {
-	color: rgb(207, 155, 72);  /* couleur du texte en orange (comme la bordure)*/
+	color: rgb(186, 27, 24);  /* couleur du texte en rouge (comme la bordure)*/
 }
 
 #lien {
+	margin-top: 30px; /*crée un espace au dessus de l'élément*/
 	text-align: center;
-	border-top: 3px solid rgb(207, 155, 72);  /* bordure au dessus du lien en orange */
+	border-top: 3px solid rgb(186, 27, 24);  /* bordure au dessus du lien en rouge */
 }
 a:visited {
-  color: hotpink;  /* la couleur de lien visité devient rose */
+  color: hotpink;  /* la couleur de lien visité devient rose sert plus à rien parce que j'ai mit un bouton*/
+}
+
+
+.mylabel {
+	background-color: rgb(100, 47, 55);
+	font-family: arial,helvetica,sans-serif;
+	font-variant: small-caps;
+	font-size: 90%;
+	padding: 2px;
+	border-right: 1px solid rgb(100, 47, 55);
+	border-bottom: 1px solid rgb(100, 47, 55);
+}
+
+#container {
+	background-color: rgb(186, 147, 108);
+	border: 3px solid black;
+	padding: 2px;
+	padding-bottom: 5%; 
+	width: 80%;
+	margin-left:10%;
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+	margin-top: 2Opx;
+}
+
+#Global { /*permet de faire en sorte que les élements soit fléxible et ne se suit pas les uns en dessous des autres*/
+    display: flex ; 
+    flex-direction: row;
+    gap: 20px; 
+}
+
+#right { 
+    flex: 1; /*fait en sorte que ca bouge (flexible) avec le txt pour bien se mettre à droite et pas en dessous*/
+    min-height: 100px;
+}
+
+.affichagebt {
+	text-align: center;
+	margin-bottom: 40px; /*permet de séparer les éléments*/
+	margin-top: 40px; /*crée un espace au dessus de l'élément*/
+
+
+}
+
+.boutonfin{
+	margin-top: 20px; /*crée un espace au dessus de l'élément*/
+	margin-bottom: 20px; /*crée un espace au dessous de l'élément*/
+}
+
+button:hover{
+	 background-color: rgb(209, 170, 48); /*quand on passe la souris sur les boutons ils changent de couleur */
+}
+
+button {
+	border-radius: 50px;
+	background-color: firebrick;
+	color: rgb(184, 209, 137) ;
+	
 }
